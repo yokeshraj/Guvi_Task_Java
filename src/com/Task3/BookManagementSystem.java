@@ -2,7 +2,7 @@ package com.Task3;
 
 import java.util.Scanner;
 
-public class MainBook {
+public class BookManagementSystem {
     public static void main(String[] args) {
         Library library = new Library(10);
         Scanner scanner = new Scanner(System.in);
