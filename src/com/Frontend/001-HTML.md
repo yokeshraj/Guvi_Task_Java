@@ -202,9 +202,14 @@ Fixed:
 
 ---
 
+<<<<<<< HEAD
 7. **Design form shown in the link.-Aadhar**
 
 ```HTML
+=======
+7. **Design form shown in the link. Aadhar**
+
+>>>>>>> a88dc7dfc08ffb93820dbe8e11bac1de5fd56132
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -354,9 +359,14 @@ Fixed:
 
 ---
 
+<<<<<<< HEAD
 8. **Use the table tag to design given image.-Voter ID**
 
 ```HTML
+=======
+8. **Use the table tag to design given image.- Voterid**
+
+>>>>>>> a88dc7dfc08ffb93820dbe8e11bac1de5fd56132
 <!DOCTYPE html>
 <html lang="en">
 <head>
