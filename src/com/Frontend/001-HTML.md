@@ -202,67 +202,321 @@ Fixed:
 
 ---
 
-7. **Design form shown in the link.**
+7. **Design form shown in the link. Aadhar**
 
-```HTML
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Card Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .aadhaar-card {
+            width: 350px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .emblem {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        .govt-info p {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .flag {
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+            margin-bottom: 10px;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 100px;
+            background-color: #ccc;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            background: url('https://via.placeholder.com/80x100') no-repeat center center;
+            background-size: cover;
+        }
+
+        .profile-details {
+            text-align: left;
+            flex: 1;
+        }
+
+        .profile-details p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+
+        .telugu {
+            font-family: 'Noto Sans Telugu', sans-serif;
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background-color: #000;
+            background: url('https://via.placeholder.com/80x80') no-repeat center center;
+            background-size: cover;
+        }
+
+        .aadhaar-number {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 10px 0;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            border-top: 1px solid #ddd;
+            padding-top: 5px;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: red;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <label for="card_number">Card Number:</label>
-        <input type="text" id="card_number" name="card_number" required><br><br>
-        
-        <label for="expiry_date">Expiry Date:</label>
-        <input type="text" id="expiry_date" name="expiry_date" required><br><br>
-        
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required><br><br>
-        
-        <label for="card_holder_name">Card Holder Name:</label>
-        <input type="text" id="card_holder_name" name="card_holder_name" required><br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
+    <div class="aadhaar-card">
+        <div class="header">
+            <div class="emblem"></div>
+            <div class="govt-info">
+                <p>भारत सरकार</p>
+                <p>GOVERNMENT OF INDIA</p>
+            </div>
+        </div>
+        <div class="flag"></div>
+        <div class="profile-section">
+            <div class="profile-picture"></div>
+            <div class="profile-details">
+                <p class="telugu">చందు ప్రదీప్</p>
+                <p>Name: XXXX</p>
+                <p>DOB: XX-XX-XXXX</p>
+                <p>Gender: MALE</p>
+            </div>
+            <div class="qr-code"></div>
+        </div>
+        <div class="aadhaar-number">
+            0000 1111 2222
+        </div>
+        <div class="footer">
+            <p>आधार - आम आदमी का अधिकार</p>
+        </div>
+    </div>
 </body>
 </html>
+
 ```
 
 ---
 
-8. **Use the table tag to design given image.**
+8. **Use the table tag to design given image.- Voterid**
 
-```HTML
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Table Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter ID Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .emblem {
+            width: 50px;
+            height: 50px;
+            background: #000; /* Placeholder for emblem */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            margin: 0 auto;
+        }
+        .header h1 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+        }
+        .header h2 {
+            font-size: 14px;
+            margin: 0;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .profile {
+            width: 60px;
+            height: 80px;
+            background: #ccc; /* Placeholder for profile picture */
+            border-radius: 5px;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 80px;
+            color: white;
+            font-size: 12px;
+        }
+        .details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .details p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .sign-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .sign-section p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .signature {
+            width: 100px;
+            height: 30px;
+            background: #ccc; /* Placeholder for signature */
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-size: 12px;
+        }
+        .id-number {
+            text-align: right;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .address-section {
+            margin-top: 20px;
+        }
+        .address-section p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>25</td>
-            <td>New York</td>
-        </tr>
-        <tr>
-            <td>Jane</td>
-            <td>28</td>
-            <td>Chicago</td>
-        </tr>
-        <tr>
-            <td>Bob</td>
-            <td>22</td>
-            <td>San Francisco</td>
-        </tr>
-    </table>
+    <div class="card-container">
+        <div class="card">
+            <div class="header">
+                <div class="emblem">EMBLEM</div>
+                <h1>Election Commission of India</h1>
+                <h2>Identity Card</h2>
+                <p>UTC026351</p>
+            </div>
+            <div class="profile-section">
+                <div class="profile">PHOTO</div>
+                <div class="details">
+                    <p>Name: XXXXX</p>
+                    <p>Father's Name: XXXXXXX</p>
+                    <p>Sex: M/F</p>
+                    <p>Date of Birth: XX-XX-XXXX</p>
+                </div>
+            </div>
+            <div class="id-number">
+                <p>20/10235689</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <p>UTC026351</p>
+            </div>
+            <div class="address-section">
+                <p>Address:</p>
+                <p>XXXXXXXXXXXXXXXXX</p>
+                  <p>XXXXXXXXXXXXX</p>
+                    <p>XXXXXXXX</p>
+                      <p>XXXXX</p>
+            </div>
+            <div class="sign-section">
+                <p>Date  : XXXXXXXXXX</p>
+                <div class="signature">SIGN</div>
+                <p>Officer Signature</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
 ```
 
 ---
