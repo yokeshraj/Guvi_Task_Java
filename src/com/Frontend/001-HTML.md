@@ -245,8 +245,6 @@ Fixed:
             background-color: #000;
             border-radius: 50%;
             margin-right: 10px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png') no-repeat center center;
-            background-size: contain;
         }
 
         .govt-info p {
@@ -275,8 +273,6 @@ Fixed:
             background-color: #ccc;
             border: 1px solid #ddd;
             margin-right: 10px;
-            background: url('https://via.placeholder.com/80x100') no-repeat center center;
-            background-size: cover;
         }
 
         .profile-details {
@@ -297,8 +293,6 @@ Fixed:
             width: 80px;
             height: 80px;
             background-color: #000;
-            background: url('https://via.placeholder.com/80x80') no-repeat center center;
-            background-size: cover;
         }
 
         .aadhaar-number {
