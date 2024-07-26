@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-cont{
+    margin-right: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group .header-label{
+    font-size: 20px;
+    font-weight: 600;
+}
+.required::after {
+    content: "*";
+    color: red;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.input-group label {
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+.input-group .form-experience{
+    margin-top: 10px;
+}
+.form-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.field-flex-box{
+    display: flex;
+    gap: 8%;
+    width: 75%;
+}
+.field-flex-box-star{
+    display: flex;
+    margin-bottom: 10px;
+}
+.star-image{
+    height: 30px;
+    width: 30px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+th {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: #F1F1F1;
+}
+tr:nth-child(odd) td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+tr:nth-child(odd) td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+td:first-child{
+    max-width: 70px;
+    text-align: left;
+}
+.radio-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
