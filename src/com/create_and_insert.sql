@@ -1,3 +1,6 @@
+CREATE DATABASE your_database_name;
+USE your_database_name;
+
 -- create_and_insert.sql
 USE your_database_name;
 
