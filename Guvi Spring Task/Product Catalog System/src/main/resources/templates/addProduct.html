@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Product</h1>
+        <form action="/products/add" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required pattern="\d+(\.\d{1,2})?" title="Please enter a valid price"><br>
+            
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required><br>
+            
+            <input type="submit" value="Add Product" class="button">
+        </form>        
+    </div>
+</body>
+</html>
