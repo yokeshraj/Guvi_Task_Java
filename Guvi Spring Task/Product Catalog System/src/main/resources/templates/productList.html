@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product List</h1>
+        <div class="product-grid">
+            <div class="product-card" th:each="product : ${products}">
+                <h3 th:text="${product.name}">Product Name</h3>
+                <p>Price: <span th:text="${product.price}"></span></p>
+                <p>Category: <span th:text="${product.category}"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
