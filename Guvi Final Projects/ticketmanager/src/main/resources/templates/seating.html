@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select Seats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #1f1f1f;
+        }
+
+        .navbar-brand {
+            color: #f8f9fa !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #f8f9fa !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #adb5bd !important;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #adb5bd !important;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #adb5bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #343a40;
+        }
+
+        .card {
+            background-color: #1f1f1f;
+            color: #f8f9fa;
+        }
+
+        .card .card-body {
+            background-color: #2b2b2b;
+        }
+
+        .card .text-muted {
+            color: #adb5bd !important;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            color: #adb5bd;
+        }
+
+        .radio-button-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 20%;
+        }
+
+        .radio-button-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .radio-button-group .icon {
+            margin-right: 10px;
+        }
+
+        .payment-details-table {
+            background-color: #2b2b2b;
+            color: #f8f9fa;
+        }
+
+        .payment-details-table th,
+        .payment-details-table td {
+            border-color: #343a40;
+        }
+
+        .payment-details-table thead {
+            background-color: #1f1f1f;
+            color: #f8f9fa;
+        }
+
+        .payment-details-table tbody tr:nth-of-type(odd) {
+            background-color: #2b2b2b;
+        }
+
+        .seat-radio {
+            margin: 0 !important;
+        }
+
+        .rightSideSeat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .leftSideSeat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .radio-btn-payment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand ms-3" href="/user/home">Bus Booking Portal</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/home">Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/booking-history">History</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center me-3">
+            <div class="profile-pic">
+                <a class="nav-link active" href="/user/profile">P</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 style="text-align:center; padding: 20px">Select the seats for Bus Number <span id="busNumber"></span></h1>
+        <div class="row profile-row">
+            <div class="col-lg-6">
+                <div class="card equal-height">
+
+                    <div class="card-body">
+                        <!-- Seating Selection -->
+                        <h4 class="mb-4">Select the Seat</h4>
+                        <hr class="my-4">
+
+                        <!-- Row 1 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat1" name="seat" class="seat-radio" value="A1">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat1">A1</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat2">A2</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat2" name="seat" class="seat-radio" value="A2">
+                            </div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat3" name="seat" class="seat-radio" value="A3">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat3">A3</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat4">A4</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat4" name="seat" class="seat-radio" value="A4">
+                            </div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat5" name="seat" class="seat-radio" value="A5">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat5">A5</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat6">A6</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat6" name="seat" class="seat-radio" value="A6">
+                            </div>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat7" name="seat" class="seat-radio" value="A7">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat7">A7</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat8">A8</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat8" name="seat" class="seat-radio" value="A8">
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat9" name="seat" class="seat-radio" value="A9">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat9">A9</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat10">A10</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat10" name="seat" class="seat-radio" value="A10">
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat11" name="seat" class="seat-radio" value="A11">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat11">A11</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat12">A12</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat12" name="seat" class="seat-radio" value="A12">
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat13" name="seat" class="seat-radio" value="A13">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat13">A13</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat14">A14</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat14" name="seat" class="seat-radio" value="A14">
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat15" name="seat" class="seat-radio" value="A15">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat15">A15</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat16">A16</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat16" name="seat" class="seat-radio" value="A16">
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat17" name="seat" class="seat-radio" value="A17">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat17">A17</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat18">A18</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat18" name="seat" class="seat-radio" value="A18">
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="radio-button-group">
+                            <div class="leftSideSeat">
+                                <input type="checkbox" id="seat19" name="seat" class="seat-radio" value="A19">
+                                <span class="material-symbols-outlined">chair</span>
+                                <label for="seat19">A19</label>
+                            </div>
+                            <div class="rightSideSeat">
+                                <label for="seat20">A20</label>
+                                <span class="material-symbols-outlined">chair</span>
+                                <input type="checkbox" id="seat20" name="seat" class="seat-radio" value="A20">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Payment Details -->
+                <div class="card equal-height">
+                    <div class="card-body">
+                        <div class="d-flex" style="justify-content: space-between;">
+                            <h4 class="mb-4">Select Payment Details</h4>
+                            <button id="confirmBooking" class="btn btn-primary mb-3">Confirm booking</button>
+                        </div>
+                        <hr class="my-4">
+                        <div class="row mb-3">
+                            <div class="col-sm-2">
+                                <p class="mb-0">Card Type</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p class="mb-0">Card Number</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p class="mb-0">Company</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="mb-0">Expiry Date</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="mb-0">Action</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div th:each="paymentMethod : ${paymentMethods}">
+                            <div class="row" style="align-items: center">
+                                <div class="col-sm-2">
+                                    <p class="text-muted mb-0" th:text="${paymentMethod.cardType}" ></p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p class="text-muted mb-0" th:text="${paymentMethod.cardNumber}"></p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p class="text-muted mb-0" th:text="${paymentMethod.cardHolderName}"></p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <p class="text-muted mb-0" th:text="${paymentMethod.expiryDate}"></p>
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="radio" name="payment" th:value="${paymentMethod.id}">
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            var date = /*[[${date}]]*/ "date";
+            var busNumber = /*[[${busNumber}]]*/ "busnumber";
+            var token = /*[[${session.token}]]*/ "token";
+            /*]]>*/
+            document.getElementById('confirmBooking').addEventListener('click', function () {
+                const selectedSeats = Array.from(document.querySelectorAll('input[name="seat"]:checked'))
+                    .map(seat => seat.value);
+                const paymentMethod = document.querySelector('input[name="payment"]:checked');
+        
+                const seatsSelected = selectedSeats.length > 0;
+                const paymentSelected = paymentMethod !== null;
+        
+                if (!seatsSelected || !paymentSelected) {
+                    alert('Please select at least one seat and one payment method.');
+                } else {
+                    const confirmProceed = confirm('Do you want to proceed with the booking?');
+                    if (confirmProceed) {
+                        const seatNumbersString = selectedSeats.join(',');
+        
+                        const bookingDetails = {
+                            busNumber: busNumber,
+                            seatNumbers: seatNumbersString,
+                            date: date,
+                            paymentMethod: {
+                                id: parseInt(paymentMethod.value)
+                            }
+                        };
+                        // console.log(" bookingDetails are " , bookingDetails);
+        
+                        fetch('/api/tickets/create', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + token
+                            },
+                            body: JSON.stringify(bookingDetails)
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    return response.json();
+                                } else {
+                                    return response.text().then(text => { throw new Error(text); });
+                                }
+                            })
+                            .then(data => {
+                                const ticketNumber = data[0].ticketNumber;
+                                // console.log(" Confirmed bookingDetails are " , data);
+                                window.location.href = `/user/book-confirm?ticketNumber=${ticketNumber}`;
+                            })
+                            .catch(error => {
+                                alert('Booking failed: ' + error.message);
+                            });
+                    }
+                }
+            });
+        </script>        
+    </body>
+</html>
